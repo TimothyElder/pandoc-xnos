@@ -2,7 +2,7 @@
 pandoc-xnos
 ===========
 
-This is a forked version of `pandoc-xnos` created by @tomduck. It has a single digit difference from the master branch version of `pandoc-xnos` which fixes a regex that reads the pandoc version number. See [tomduck/pandoc-xnos#28](https://github.com/tomduck/pandoc-xnos/issues/28) for more information.
+This is a forked version of `pandoc-xnos` created by [tomduck](https://github.com/tomduck). It has a single digit difference from the master branch version of `pandoc-xnos` which fixes a regex that reads the pandoc version number. See [tomduck/pandoc-xnos#28](https://github.com/tomduck/pandoc-xnos/issues/28) for more information.
 
 The *pandoc-xnos* filter suite provides facilities for cross-referencing in markdown documents processed by [pandoc]. Individual filters are maintained in separate projects.  They are:
 
