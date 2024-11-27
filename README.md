@@ -2,6 +2,8 @@
 pandoc-xnos
 ===========
 
+This is a forked version of `pandoc-xnos` created by @tomduck. It has a single digit difference from the master branch version of `pandoc-xnos` which fixes a regex that reads the pandoc version number. See [tomduck/pandoc-xnos#28](https://github.com/tomduck/pandoc-xnos/issues/28) for more information.
+
 The *pandoc-xnos* filter suite provides facilities for cross-referencing in markdown documents processed by [pandoc]. Individual filters are maintained in separate projects.  They are:
 
 * [pandoc-fignos]: Numbers figures and figure references.
@@ -30,20 +32,17 @@ Contents
 
  1. [Installation](#installation)
  2. [Usage](#usage)
- 3. [Getting Help](#getting-help)
-
 
 Installation
 ------------
 
-The Pandoc-xnos filters require [python].  It is easily installed -- see [here](https://realpython.com/installing-python/). <sup>[1](#footnote1)</sup>  Either python 2.7 or 3.x will do.
+The Pandoc-xnos filters require [python].  It is easily installed -- see [here](https://realpython.com/installing-python/). Either python 2.7 or 3.x will do.
 
-The pandoc-xnos filter suite may be installed using the shell command
+The forked version of pandoc-xnos filter suite may be installed using the shell command
 
-    pip install pandoc-fignos pandoc-eqnos pandoc-tablenos \
-                pandoc-secnos --user
+    pip install git+https://github.com/TimothyElder/pandoc-xnos
 
-and upgraded by appending `--upgrade` to the above command.
+**Be sure to add the location of the binaries to your PATH**. They are usually installed in `/Users/your-user-name/Library/Python/3.9/bin`.
 
 Pip is a program that downloads and installs software from the Python Package Index, [PyPI].
 
@@ -64,18 +63,3 @@ The pandoc-xnos filter suite may be applied using the
 option with pandoc.  It is also possible to apply the filters individually.
 
 Any use of `--filter pandoc-citeproc` or `--bibliography=FILE` should come *after* the `pandoc-xnos` filter call.
-
-
-Getting Help
-------------
-
-If you have any difficulties with pandoc-xnos, or would like to see a new feature, then please submit a report to our [Issues tracker].
-
-[Issues tracker]: https://github.com/tomduck/pandoc-xnos/issues
-
-
-----
-
-**Footnotes**
-
-<a name="footnote1">1</a>: For MacOS, my preferred install method is to use the Installer package [available from python.org](https://www.python.org/downloads/).
